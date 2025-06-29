@@ -7,6 +7,7 @@ import { App } from './app/app';
 import { appRoutes, routes } from './app/app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatLauncherComponent }     from './app/chat/chat-launcher/chat-launcher';
 
 bootstrapApplication(App, {
   providers: [
@@ -15,7 +16,8 @@ bootstrapApplication(App, {
       HttpClientModule
     ),
     // Your router configuration
-    provideRouter(routes)
+    provideRouter(routes),
+    { provide: 'standaloneComponents', useValue: [ ChatLauncherComponent ] }
   ]
 })
 .catch(err => console.error(err));
