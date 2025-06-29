@@ -1,0 +1,22 @@
+<div *ngIf="summary" class="summary">
+  <h1 class="name">{{ summary.fullName }}</h1>
+  <h2 class="title">{{ summary.title }}</h2>
+
+  <div class="contacts">
+    <span class="item"><i class="fa fa-phone"></i> {{ summary.phone }}</span>
+    <span class="item"><i class="fa fa-envelope"></i> {{ summary.email }}</span>
+    <a class="item" [href]="summary.linkedInUrl" target="_blank">
+      <i class="fa fa-link"></i> LinkedIn
+    </a>
+
+    <a class="item" [href]="summary.gitHubUrl" target="_blank">
+      <i class="fa fa-github"></i> GitHub
+    </a>
+    <span class="item"><i class="fa fa-map-marker-alt"></i> Hyderabad, India</span>
+    <span class="item"><i class="fa fa-star"></i> Extra Field</span>
+  </div>
+
+  <p class="bio">{{ summary.bio }}</p>
+</div>
+
+<router-outlet></router-outlet>
