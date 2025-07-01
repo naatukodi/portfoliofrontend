@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+.skill-card {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+  transition: background 0.2s;
+}
+
+.skill-card:hover {
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}

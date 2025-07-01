@@ -1,0 +1,7 @@
+<div class="grid grid-cols-2 gap-4">
+  <div *ngFor="let s of skills" class="skill-card p-4 border rounded">
+    <h4 class="font-semibold">{{ s.name }}</h4>
+    <p class="text-sm text-gray-600">Category: {{ s.category }}</p>
+    <p class="text-sm text-gray-600">Proficiency: {{ s.proficiency }}/5</p>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  transition: box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+a {
+  color: #3b82f6;
+  text-decoration: none;
+}
