@@ -1,7 +1,17 @@
-<div class="grid grid-cols-2 gap-4">
-  <div *ngFor="let s of skills" class="skill-card p-4 border rounded">
-    <h4 class="font-semibold">{{ s.name }}</h4>
-    <p class="text-sm text-gray-600">Category: {{ s.category }}</p>
-    <p class="text-sm text-gray-600">Proficiency: {{ s.proficiency }}/5</p>
+<!-- src/app/components/skill/skill.component.html -->
+<div *ngFor="let group of groups" class="category-block">
+  <h3 class="category-title">{{ group.category }}</h3>
+  <div class="word-cloud">
+    <span
+      *ngFor="let s of group.skills"
+      class="cloud-item"
+      [ngStyle]="{
+        'font-size': (0.8 + s.proficiency * 0.3) + 'rem',
+        color: s.color
+      }"
+      title="{{ s.name }} ({{ s.proficiency }}/5)"
+    >
+      {{ s.name }}
+    </span>
   </div>
 </div>

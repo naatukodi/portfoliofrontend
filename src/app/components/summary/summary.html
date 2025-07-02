@@ -16,7 +16,13 @@
     <span class="item"><i class="fa fa-star"></i> Extra Field</span>
   </div>
 
-  <p class="bio">{{ summary.bio }}</p>
+  <div class="bio">
+    <h3>Summary</h3>
+    <ul class="bio-list">
+      <li *ngFor="let point of bioPoints">{{ point }}</li>
+    </ul>
+  </div>
+
 </div>
 
 <router-outlet></router-outlet>
